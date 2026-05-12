@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Md Fahim Ahammed</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero {
+      padding: 140px 0 60px;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero-tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .page-hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .page-hero-title span { color: var(--accent); }
+    .blog-section { padding: 60px 0 90px; }
+
+    .featured-post {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 36px;
+      align-items: center;
+      margin-bottom: 50px;
+      transition: var(--transition);
+    }
+    .featured-post:hover { border-color: var(--border-hover); box-shadow: var(--shadow-glow); }
+
+    .featured-thumb {
+      height: 220px;
+      background: linear-gradient(135deg, #0d1421, #080c14);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4.5rem;
+      border: 1px solid var(--border);
+    }
+
+    .featured-label {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--accent-glow);
+      border: 1px solid var(--border-hover);
+      border-radius: 99px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .featured-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .featured-excerpt {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .featured-post { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Fahim<span></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-tag">// Thoughts & Learnings</div>
+    <h1 class="page-hero-title">My <span>Blog</span></h1>
+    <p class="section-subtitle" style="margin-top:10px">I write about programming, web dev, competitive coding, and student life.</p>
+  </div>
+</div>
+
+<!-- BLOG -->
+<section class="blog-section">
+  <div class="container">
+
+    <!-- Featured Post -->
+    <div class="featured-post fade-up">
+      <div class="featured-thumb">🧠</div>
+      <div>
+        <span class="featured-label">⭐ Featured Post</span>
+        <h2 class="featured-title">My Journey Into Competitive Programming with C</h2>
+        <p class="featured-excerpt">
+          How I started solving problems on Codeforces as a CST student, the struggles I faced,
+          and what I learned about algorithms, data structures, and the mindset needed to level up in competitive programming.
+        </p>
+        <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
+          <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted)">
+            <i class="bi bi-calendar3"></i> May 2025
+          </span>
+          <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted)">
+            <i class="bi bi-clock"></i> 7 min read
+          </span>
+        </div>
+        <a href="#" class="btn-primary" style="display:inline-flex;margin-top:16px;font-size:0.82rem;padding:10px 20px;">
+          Read Article →
+        </a>
+      </div>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="blog-grid">
+
+      <a class="blog-card fade-up" href="#">
+        <div class="blog-thumb">🌐</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat">Web Dev</span>
+            <span class="blog-date">Apr 2025</span>
+          </div>
+          <h3 class="blog-title">Building Responsive Websites with Bootstrap 5: A Beginner's Guide</h3>
+          <p class="blog-excerpt">
+            A step-by-step walkthrough of how I build responsive layouts using Bootstrap's grid system, components, and utility classes.
+          </p>
+          <span class="blog-read-more">Read more <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="blog-card fade-up" href="#">
+        <div class="blog-thumb">⚙️</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat">PHP</span>
+            <span class="blog-date">Mar 2025</span>
+          </div>
+          <h3 class="blog-title">PHP + MySQL: Building a Simple CRUD Application from Scratch</h3>
+          <p class="blog-excerpt">
+            Learn how to create, read, update, and delete records using PHP and MySQL — the foundation of most dynamic web apps.
+          </p>
+          <span class="blog-read-more">Read more <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="blog-card fade-up" href="#">
+        <div class="blog-thumb">🎓</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat">Student Life</span>
+            <span class="blog-date">Feb 2025</span>
+          </div>
+          <h3 class="blog-title">Life at Rangpur Polytechnic: What the First Semester Was Like</h3>
+          <p class="blog-excerpt">
+            My honest experience as a first-year CST student — classes, lab sessions, new friendships, and the motivation that keeps me going.
+          </p>
+          <span class="blog-read-more">Read more <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="blog-card fade-up" href="#">
+        <div class="blog-thumb">📊</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat">Algorithms</span>
+            <span class="blog-date">Jan 2025</span>
+          </div>
+          <h3 class="blog-title">Understanding Big-O Notation: A Visual Explanation for Beginners</h3>
+          <p class="blog-excerpt">
+            Breaking down time and space complexity concepts in a simple, visual way for fellow CST students and beginners.
+          </p>
+          <span class="blog-read-more">Read more <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="blog-card fade-up" href="#">
+        <div class="blog-thumb">⚽</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat">Life</span>
+            <span class="blog-date">Dec 2024</span>
+          </div>
+          <h3 class="blog-title">Why Football Makes Me a Better Programmer</h3>
+          <p class="blog-excerpt">
+            Teamwork, strategy, and resilience — the lessons I take from the football field and apply to my coding practice every day.
+          </p>
+          <span class="blog-read-more">Read more <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="blog-card fade-up" href="#">
+        <div class="blog-thumb">🚀</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat">Tools</span>
+            <span class="blog-date">Nov 2024</span>
+          </div>
+          <h3 class="blog-title">Git & GitHub: Version Control for Student Developers</h3>
+          <p class="blog-excerpt">
+            A beginner-friendly guide to using Git and GitHub for managing code projects, collaborating, and building your portfolio.
+          </p>
+          <span class="blog-read-more">Read more <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 <span>Md Fahim Ahammed</span>. All rights reserved.</p>
+      <a href="../index.html" style="font-family:var(--font-mono);font-size:0.8rem;color:var(--accent);text-decoration:none;">← Back to Home</a>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="back-top" id="backTop">↑</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
